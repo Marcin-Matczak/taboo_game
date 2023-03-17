@@ -11,51 +11,88 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   color: #444;
-  line-height: 1.9;
   background: linear-gradient(to left, rgb(248, 131, 121), rgb(93, 12, 147));
 }
 
 .app {
   position: relative;
-  width: 60%;
-  height: 80%;
-  margin:auto; 
-  background-color: #444;
+  width: 40%;
+  padding: 5% 0;
+  background-color: rgb(85,85,85,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 20px;
 }
 
 .card {
-  height: 70%;
-  width: 50%;
-  background-color:rgb(195, 177, 225);
+  width: 60%;
+  background-color:rgb(195, 177, 225, 0.5);
+  border: 3px solid #444;
+  border-radius: 30px;  
+}
+
+.card__answer {
+  text-align: center; 
+  font-size: 2vw;  
+}
+
+h2 {
+  margin-top: 10%;
+  color: black;
+}
+
+.card__tabooWords {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: azure;
+  font-size: 1.3vw;
+  margin: 10% 5% 20% 5%;
+  border-radius: 30px;
+  padding: 8% 0 8% 0;
+}
+
+ul {
+  list-style: none;
+  line-height: 2.7;
 }
 
 .btn {
   position: absolute;
+  font-size: 2vw;
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: initial;
+}
+
+.btn:hover {
+  background-color: inherit;
 }
 
 .previous {
-  left: 12%;
+  left: 7%;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  font-size: 3rem;
+  cursor: pointer;
+  background-color: initial;  
 }
 
 .next {
-  right:12%;
+  right:7%;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  font-size: 3rem;
+  cursor: pointer; 
 }
 
 .random {
-  bottom: 6%;
+  bottom: 2%;
   width: 130px;
-  height: 60px;
-  font-size: 3rem;
-  border-radius: 20px;
+  padding: 12px;
+  border-radius: 80px;
+  cursor: pointer;
 }
