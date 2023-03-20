@@ -6,30 +6,42 @@
 
 body {
   height: 100vh;
-  display: grid;
-  place-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  color: #444;
+  color: rgb(68, 68, 68);
   background: linear-gradient(to left, rgb(248, 131, 121), rgb(93, 12, 147));
+}
+
+h1 {
+  font-family: 'Rubik Vinyl', cursive;
+  font-size: 5vw;
+  margin-bottom: 1%;
+  
 }
 
 .app {
   position: relative;
   width: 40%;
   padding: 5% 0;
-  background-color: rgb(85,85,85,0.5);
+  background-color: rgb(85,85,85,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
+  box-shadow: 11px 16px 22px -1px rgba(0, 0, 0, 1);
 }
 
 .card {
   width: 60%;
-  background-color:rgb(195, 177, 225, 0.5);
-  border: 3px solid #444;
-  border-radius: 30px;  
+  background-color: rgb(0, 0, 128, 0.4);
+  background: linear-gradient(to left, rgb(0, 0, 65, 0.5), rgb(93, 12, 147));
+  border: 5px solid black;
+  border-radius: 20px;  
+  font-weight: 600;
 }
 
 .card__answer {
@@ -38,18 +50,20 @@ body {
 }
 
 h2 {
-  margin-top: 15%;
-  color: black;
+  margin-top: 10%;
+  color: rgb(229, 228, 226);
+  font-size: 2.5vw;
 }
 
 .card__tabooWords {
   display: flex;
   text-align: center;
   justify-content: center;
-  background-color: azure;
-  font-size: 1.3vw;
-  margin: 30% 5% 5% 5%;
-  border-radius: 30px;
+  background-color: rgb(229, 228, 226);
+  font-size: 1.6vw;
+  margin-top: 10%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   padding: 8% 0 8% 0;
 }
 
@@ -61,15 +75,16 @@ ul {
 .btn {
   position: absolute;
   font-size: 2vw;
-  transition: background 0.2s;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background-color: initial;
+  border: none;
+  background-color:  rgb(68, 68, 68,0.3);
 }
 
 .btn:hover {
-  background-color: inherit;
+  background: linear-gradient(to left, rgb(0, 0, 65, 0.5), rgb(93, 12, 147));
 }
 
 .previous {
@@ -78,7 +93,6 @@ ul {
   height: 60px;
   border-radius: 50%;
   cursor: pointer;
-  background-color: initial;  
 }
 
 .next {
@@ -95,4 +109,27 @@ ul {
   padding: 12px;
   border-radius: 80px;
   cursor: pointer;
+}
+
+.timer {
+  position:absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 1.6vw;
+}
+
+.timerun {
+  transform: scale(1);
+  animation: pulse 1s linear infinite;
+  color: rgb(197, 0, 0);
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+
+  10% {
+      transform: scale(1.1);
+  }
 }
