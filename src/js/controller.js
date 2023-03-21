@@ -6,7 +6,7 @@ import { cardRender } from './view.js';
 
 const nextBtn = document.querySelector('.next');
 const previousBtn = document.querySelector('.previous');
-const drawBtn = document.querySelector('.random');
+const drawBtn = document.querySelector('.draw');
 
 //  Currently displayed card
 
@@ -18,6 +18,7 @@ let timer;
 const resetTimer = function () {
   if (timer) clearInterval(timer);
   timer = startTimer();
+  timerContainer.classList.remove('timerun');
 };
 
 // Random Card
@@ -64,10 +65,7 @@ const startTimer = function () {
     const sec = String(time % 60).padStart(2, 0);
     timerContainer.textContent = `${min}:${sec}`;
     if (time === 10) timerContainer.classList.add('timerun');
-    if (time === 0) {
-      clearInterval(timer);
-      timerContainer.classList.remove('timerun');
-    }
+    if (time === 0) return;
     time--;
   };
 

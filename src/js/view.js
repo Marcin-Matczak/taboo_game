@@ -7,13 +7,13 @@ export const cardRender = function (card) {
   const tabooAnswer = answer.toUpperCase();
 
   const answerElement = `
-    <div class="card__answer">
+    <header class="card__answer">
       <h2>${tabooAnswer}</h2>
-    </div> 
-    <div class="card__tabooWords">
+    </header> 
+    <section class="card__tabooWords">
       <ul>
       </ul>
-    </div>
+    </section>
   `;
 
   cardContainer.insertAdjacentHTML('beforeend', answerElement);

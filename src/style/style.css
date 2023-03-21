@@ -1,86 +1,103 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html, body { 
+  height: 100%; 
 }
 
 body {
-  height: 100vh;
-  width: 100%;
+  background: linear-gradient(to left, rgb(248, 131, 121), rgb(93, 12, 147));
+  color: rgb(68, 68, 68);
+  font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  font-family: 'Poppins', sans-serif;
-  color: rgb(68, 68, 68);
-  background: linear-gradient(to left, rgb(248, 131, 121), rgb(93, 12, 147));
 }
 
-h1 {
-  font-family: 'Rubik Vinyl', cursive;
-  font-size: 5vw;
-  margin-bottom: 1%;
-  
-}
+/* main */
 
 .app {
+  height: 70%;
+  width: 70%;
   position: relative;
-  width: 40%;
-  padding: 5% 0;
   background-color: rgb(85,85,85,0.2);
+  border-radius: 20px;
+  box-shadow: 11px 16px 22px -1px rgba(0, 0, 0, 1);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
-  box-shadow: 11px 16px 22px -1px rgba(0, 0, 0, 1);
 }
 
+/* header -- timer and game title*/
+
+
+h1 {
+  position: absolute;
+  top: -10%;
+  left: 0%;
+  color: rgb(229, 228, 226);
+  font-family: 'Rubik Vinyl', cursive;
+  font-size: 2.5rem;
+}
+
+.timer {
+  position: absolute;
+  top: 3%;
+  right:3%;
+  font-size: 1.2rem;
+}
+
+/* Card content */
+
 .card {
-  width: 60%;
+  height: 80%;
+  width: 50%;
   background-color: rgb(0, 0, 128, 0.4);
   background: linear-gradient(to left, rgb(0, 0, 65, 0.5), rgb(93, 12, 147));
-  border: 5px solid black;
+  border: 3px solid black;
   border-radius: 20px;  
   font-weight: 600;
+  margin-bottom: 5%;
+  display: grid;  
+  grid-template-rows: [row1-start] 25% auto [last-line];
 }
 
 .card__answer {
-  text-align: center; 
-  font-size: 2vw;  
-}
-
-h2 {
-  margin-top: 10%;
   color: rgb(229, 228, 226);
-  font-size: 2.5vw;
+  font-size: 1.6rem;  
+  text-align: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card__tabooWords {
-  display: flex;
-  text-align: center;
-  justify-content: center;
   background-color: rgb(229, 228, 226);
-  font-size: 1.6vw;
-  margin-top: 10%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  padding: 8% 0 8% 0;
+  font-size: 1.4rem;  
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
 }
 
 ul {
-  list-style: none;
   line-height: 2.7;
+  list-style: none;
 }
+
+/* Buttons */
 
 .btn {
   position: absolute;
-  font-size: 2vw;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: initial;
-  border: none;
   background-color:  rgb(68, 68, 68,0.3);
+  border: none;
+  font-size: 1rem;
+  align-items: center;
 }
 
 .btn:hover {
@@ -88,48 +105,46 @@ ul {
 }
 
 .previous {
-  left: 7%;
-  width: 60px;
   height: 60px;
+  width: 60px;
+  left: 12%;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .next {
-  right:7%;
-  width: 60px;
   height: 60px;
+  width: 60px;
+  right:12%;
   border-radius: 50%;
   cursor: pointer; 
 }
 
-.random {
+.draw {
+  height: 60px;
+  width: 60px;
   bottom: 2%;
-  width: 130px;
-  padding: 12px;
-  border-radius: 80px;
+  border-radius: 10%;
   cursor: pointer;
 }
 
-.timer {
-  position:absolute;
-  top: 30px;
-  right: 30px;
-  font-size: 1.6vw;
+.draw span {
+  font-size: 3.5rem;
 }
 
+/* Animations */
+
 .timerun {
-  transform: scale(1);
   animation: pulse 1s linear infinite;
-  color: rgb(197, 0, 0);
+  transform: scale(1);
+  color: rgb(170, 0, 0);
 }
 
 @keyframes pulse {
   0% {
       transform: scale(1);
   }
-
   10% {
-      transform: scale(1.1);
+      transform: scale(1.2);
   }
 }
