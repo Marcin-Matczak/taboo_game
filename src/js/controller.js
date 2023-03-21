@@ -8,7 +8,7 @@ const nextBtn = document.querySelector('.next');
 const previousBtn = document.querySelector('.previous');
 const drawBtn = document.querySelector('.draw');
 
-//  Currently displayed card
+//  Currently displayed card and time
 
 let currCard;
 let timer;

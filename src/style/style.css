@@ -1,3 +1,5 @@
+/* Global */
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +19,7 @@ body {
   justify-content: center;
 }
 
-/* main */
+/* Main */
 
 .app {
   height: 750px;
@@ -31,7 +33,7 @@ body {
   justify-content: center;
 }
 
-/* header -- timer and game title*/
+/* Header -- timer and game title*/
 
 
 h1 {
@@ -78,7 +80,7 @@ h1 {
   background-color: rgb(229, 228, 226);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  font-size: 1.4rem;  
+  font-size: 1.5rem;  
   text-align: center;
   display: flex;
   align-items: center;
@@ -86,13 +88,15 @@ h1 {
 }
 
 ul {
-  line-height: 2.7;
+  line-height: 2.8;
   list-style: none;
 }
 
 /* Buttons */
 
 .btn {
+  height: 60px;
+  width: 60px;
   position: absolute;
   background-color:  rgb(68, 68, 68,0.3);
   border: none;
@@ -105,24 +109,18 @@ ul {
 }
 
 .previous {
-  height: 60px;
-  width: 60px;
   left: 12%;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .next {
-  height: 60px;
-  width: 60px;
   right:12%;
   border-radius: 50%;
   cursor: pointer; 
 }
 
 .draw {
-  height: 60px;
-  width: 60px;
   bottom: 2%;
   border-radius: 10%;
   cursor: pointer;
@@ -136,17 +134,15 @@ ul {
 
 .timerun {
   animation: pulse 1s linear 10 forwards; 
-  animation-duration: 10s;
-  transform: scale(1);
   color: rgb(170, 0, 0);
 }
 
 @keyframes pulse {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
   100% {
-      transform: scale(1.2);
+    transform: scale(1.2);
   }
 }
 
@@ -159,6 +155,113 @@ ul {
     filter: blur(0rem);
   }
   100% {
-      filter: blur(0.4rem);
+    filter: blur(0.4rem);
+  }
+}
+
+/* Media query*/
+
+@media (max-width: 1600px) {
+  .app {
+    height: 600px;
+    width: 700px;
+  }
+  
+  .card__answer {  
+    font-size: 1.5rem;  
+  }
+  
+  .card__tabooWords {
+    font-size: 1.4rem;  
+  }
+  
+  ul {
+    line-height: 2.6;
+  }
+  .btn {
+    height: 40px;
+    width: 40px;
+  }
+  .draw span {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .app {
+    height: 550px;
+    width: 600px;
+  }
+  
+  .card__answer {  
+    font-size: 1.3rem;  
+  }
+  
+  .card__tabooWords {
+    font-size: 1.2rem;  
+  }
+  .btn {
+    height: 35px;
+    width: 35px;
+  }
+  .draw span {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    height: 450px;
+    width: 500px;
+  }
+  
+  .card__answer {  
+    font-size: 1.1rem;  
+  }
+  
+  .card__tabooWords {
+    font-size: 1rem;  
+  }
+  .btn {
+    height: 35px;
+    width: 35px;
+  }
+  .draw span {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    height: 350px;
+    width: 350px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .timer {
+    font-size: 1rem;
+  }
+  
+  .card__answer {  
+    font-size: 0.9rem;  
+  }
+  
+  .card__tabooWords {
+    font-size: 0.9rem;  
+  }
+  
+  ul {
+    line-height: 2.2;
+  }
+
+  .btn {
+    height: 25px;
+    width: 25px;
+  }
+  .draw span {
+    font-size: 1.6rem;
   }
 }
