@@ -20,8 +20,8 @@ body {
 /* main */
 
 .app {
-  height: 70%;
-  width: 70%;
+  height: 750px;
+  width: 800px;
   position: relative;
   background-color: rgb(85,85,85,0.2);
   border-radius: 20px;
@@ -135,7 +135,8 @@ ul {
 /* Animations */
 
 .timerun {
-  animation: pulse 1s linear infinite;
+  animation: pulse 1s linear 10 forwards; 
+  animation-duration: 10s;
   transform: scale(1);
   color: rgb(170, 0, 0);
 }
@@ -144,7 +145,20 @@ ul {
   0% {
       transform: scale(1);
   }
-  10% {
+  100% {
       transform: scale(1.2);
+  }
+}
+
+.blur {
+  animation: blur 3s forwards;
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(0rem);
+  }
+  100% {
+      filter: blur(0.4rem);
   }
 }

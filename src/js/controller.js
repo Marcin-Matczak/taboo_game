@@ -19,6 +19,7 @@ const resetTimer = function () {
   if (timer) clearInterval(timer);
   timer = startTimer();
   timerContainer.classList.remove('timerun');
+  cardContainer.classList.remove('blur');
 };
 
 // Random Card
@@ -57,15 +58,19 @@ const previousCard = function () {
 // Card change timer
 
 const timerContainer = document.querySelector('.timer');
+const cardContainer = document.querySelector('.card');
 
 const startTimer = function () {
-  let time = 12;
+  let time = 120;
   const tick = function () {
     const min = String(Math.trunc(time / 60)).padStart(2, 0);
     const sec = String(time % 60).padStart(2, 0);
     timerContainer.textContent = `${min}:${sec}`;
     if (time === 10) timerContainer.classList.add('timerun');
-    if (time === 0) return;
+    if (time === 0) {
+      cardContainer.classList.add('blur');
+      return;
+    }
     time--;
   };
 
