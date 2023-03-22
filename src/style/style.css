@@ -130,6 +130,15 @@ ul {
   font-size: 3.5rem;
 }
 
+/* Footer*/
+
+.copyright{
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  font-size: 0.7rem;
+}
+
 /* Animations */
 
 .timerun {

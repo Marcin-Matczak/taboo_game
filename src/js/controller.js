@@ -1,6 +1,7 @@
 import { tabooCards } from './model.js';
 import { clearCardContent } from './helpers.js';
 import { cardRender } from './view.js';
+import { TIMEOUT_SEC, LAST_SEC } from './config.js';
 
 // Buttons
 
@@ -61,12 +62,12 @@ const timerContainer = document.querySelector('.timer');
 const cardContainer = document.querySelector('.card');
 
 const startTimer = function () {
-  let time = 120;
+  let time = TIMEOUT_SEC;
   const tick = function () {
     const min = String(Math.trunc(time / 60)).padStart(2, 0);
     const sec = String(time % 60).padStart(2, 0);
     timerContainer.textContent = `${min}:${sec}`;
-    if (time === 10) timerContainer.classList.add('timerun');
+    if (time === LAST_SEC) timerContainer.classList.add('timerun');
     if (time === 0) {
       cardContainer.classList.add('blur');
       return;
