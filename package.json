@@ -1,0 +1,16 @@
+{
+  "name": "taboo",
+  "version": "1.0.0",
+  "description": "Taboo game",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Marcin Matczak",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.29.1",
+    "parcel": "^2.8.3"
+  }
+}
